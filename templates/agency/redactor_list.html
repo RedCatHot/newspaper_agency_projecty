@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Redactor List</h1>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="#" class="btn btn-primary">Create New Redactor</a>
+      </div>
+    </div>
+
+{#    <div class="search">#}
+{#      {% include "includes/search_form.html" %}#}
+{#    </div>#}
+
+    {% if redactor_list %}
+      <div class="dish-type-container">
+        {% for redactor in redactor_list %}
+          <div class="dish-type-item">
+            <div class="dish-type-name"><a href="#">{{ redactor.username }}</a></div>
+            <div class="dish-type-list-name">
+              {% for newspaper in redactor.newspapers.all %}
+                <hr>
+                <p>Newspapers:</p>
+                <p><strong>Title:</strong> <a href="#">{{ newspaper.title }}</a></p>
+              {% empty %}
+                <p>There are no newspapers!</p>
+              {% endfor %}
+            </div>
+            <div class="dish-type-buttons">
+              <a href="#" class="btn btn-update">Update</a>
+              <a href="#" class="btn btn-delete">Delete</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="mt-4">There are no dish types in the menu.</p>
+    {% endif %}
+  </div>
+{% endblock %}

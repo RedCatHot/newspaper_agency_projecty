@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Newspaper List</h1>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="#" class="btn btn-primary">Create New Newspaper</a>
+      </div>
+    </div>
+
+{#    <div class="search">#}
+{#      {% include "includes/search_form.html" %}#}
+{#    </div>#}
+
+    {% if newspaper_list %}
+      <div class="dish-type-container">
+        {% for newspaper in newspaper_list %}
+          <div class="dish-type-item">
+            <div class="dish-type-name"><a href="#">{{ newspaper.title }}</a></div>
+            <div class="dish-type-list-name">
+              {% for publisher in newspaper.publishers.all %}
+                <hr>
+                <p>Publishers:</p>
+                <p><strong>Full name:</strong> <a href="#">{{ publisher.first_name }} {{ publisher.last_name }}</a></p>
+              {% empty %}
+                <p>There are no publishers!</p>
+              {% endfor %}
+            </div>
+            <div class="dish-type-buttons">
+              <a href="#" class="btn btn-update">Update</a>
+              <a href="#" class="btn btn-delete">Delete</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="mt-4">There are no dish types in the menu.</p>
+    {% endif %}
+  </div>
+{% endblock %}
