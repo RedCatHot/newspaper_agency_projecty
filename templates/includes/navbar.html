@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{% url "newspaper:index" %}">Home</a>
+        <a class="nav-link" href="{% url "agency:index" %}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">All topics</a>
+        <a class="nav-link" href="{% url "agency:topic-list" %}">All topics</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">All newspapers</a>
+        <a class="nav-link" href="{% url "agency:newspaper-list" %}">All newspapers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">All redactors</a>
+        <a class="nav-link" href="{% url "agency:redactor-list" %}">All redactors</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
