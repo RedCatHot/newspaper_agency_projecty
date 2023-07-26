@@ -20,12 +20,12 @@
       <div class="dish-type-container">
         {% for redactor in redactor_list %}
           <div class="dish-type-item">
-            <div class="dish-type-name"><a href="#">{{ redactor.username }}</a></div>
+            <div class="dish-type-name"><a href="{% url "agency:redactor-detail" pk=redactor.id %}">{{ redactor.username }}</a></div>
             <div class="dish-type-list-name">
               {% for newspaper in redactor.newspapers.all %}
                 <hr>
                 <p>Newspapers:</p>
-                <p><strong>Title:</strong> <a href="#">{{ newspaper.title }}</a></p>
+                <p><strong>Title:</strong> <a href="{% url "agency:newspaper-detail" pk=newspaper.id %}">{{ newspaper.title }}</a></p>
               {% empty %}
                 <p>There are no newspapers!</p>
               {% endfor %}
