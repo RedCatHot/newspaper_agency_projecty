@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>{{ redactor.first_name }} {{ redactor.last_name }}</h1>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="#" class="btn btn-secondary link-to-page">Update</a>
+        <a href="#" class="btn btn-danger link-to-page">Delete</a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <p><strong>Username:</strong> {{ redactor.username }} </p>
+        {% if redactor.years_of_experience %}
+          <p><strong>Years of experience:</strong> {{ redactor.years_of_experience }} </p>
+        {% endif %}
+        <p><strong>Is staff:</strong> {{ redactor.is_staff }}</p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3>Newspapers</h3>
+        {% for newspaper in redactor.newspapers.all %}
+          <hr>
+          <p class="text-muted"><strong>ID:</strong> {{ newspaper.id }} </p>
+          <p><strong>Title:</strong> {{ newspaper.title }}</p>
+          <p><strong>Topic:</strong> {{ newspaper.topic.name }}</p>
+        {% empty %}
+          <p>There are no newspapers!</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
