@@ -20,12 +20,12 @@
       <div class="dish-type-container">
         {% for newspaper in newspaper_list %}
           <div class="dish-type-item">
-            <div class="dish-type-name"><a href="#">{{ newspaper.title }}</a></div>
+            <div class="dish-type-name"><a href="{% url "agency:newspaper-detail" pk=newspaper.id %}">{{ newspaper.title }}</a></div>
             <div class="dish-type-list-name">
               {% for publisher in newspaper.publishers.all %}
                 <hr>
                 <p>Publishers:</p>
-                <p><strong>Full name:</strong> <a href="#">{{ publisher.first_name }} {{ publisher.last_name }}</a></p>
+                <p><strong>Full name:</strong> <a href="{% url "agency:redactor-detail" pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a></p>
               {% empty %}
                 <p>There are no publishers!</p>
               {% endfor %}
