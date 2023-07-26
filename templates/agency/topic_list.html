@@ -25,7 +25,7 @@
               {% for newspaper in topic.newspapers.all %}
                 <hr>
                 <p>Newspapers:</p>
-                <p><strong>Title:</strong> <a href="#">{{ newspaper.title }}</a></p>
+                <p><strong>Title:</strong> <a href="{% url "agency:newspaper-detail" pk=newspaper.id %}">{{ newspaper.title }}</a></p>
               {% empty %}
                 <p>There are no newspapers!</p>
               {% endfor %}
