@@ -35,3 +35,11 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
+
+
+class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Newspaper
+
+
+class RedactorDetailListView(LoginRequiredMixin, generic.DetailView):
+    model = Redactor
