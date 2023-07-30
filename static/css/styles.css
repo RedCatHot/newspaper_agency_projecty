@@ -275,9 +275,13 @@ p.lead {
 
 .col-md-6 p,
 .col-md-12 p {
-  color: #000 !important;
+  color: #000
 }
 
 .col-md-12 h3 {
-  color: #000 !important;
+  color: #000
+}
+
+.larger-emoji {
+  font-size: 50px;
 }
