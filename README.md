@@ -7,8 +7,8 @@ Django project for managing newspapers, redactors and topics
 Python3 must be already installed
 
 shell  
-git clone https://github.com/RedCatHot/todo_list_exam/tree/develop 
-cd todo_list  
+git clone https://github.com/RedCatHot/newspaper_agency_projecty/tree/develop   
+cd newspaper agency   
 python -m venv venv  
 venv\Scripts\activate (on Windows)  
 source venv/bin/activate (on macOS)  
