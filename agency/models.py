@@ -9,7 +9,7 @@ class Topic(models.Model):
     class Meta:
         ordering = ["name"]
 
-    def str(self):
+    def __str__(self):
         return self.name
 
 
@@ -19,7 +19,7 @@ class Redactor(AbstractUser):
     class Meta:
         ordering = ["username"]
 
-    def str(self):
+    def __str__(self):
         return f"{self.username} ({self.first_name} {self.last_name})"
 
 
@@ -37,5 +37,5 @@ class Newspaper(models.Model):
     class Meta:
         ordering = ["title"]
 
-    def str(self):
+    def __str__(self):
         return self.title
