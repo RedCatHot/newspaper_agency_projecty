@@ -2,6 +2,10 @@
 
 Django project for managing newspapers, redactors and topics
 
+## Check it out
+
+[Newspaper Agency project deployed to Render](PASTE_LINK_HERE)
+
 ## Installation
 
 Python3 must be already installed
