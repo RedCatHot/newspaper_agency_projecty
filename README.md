@@ -42,7 +42,7 @@ password: Whatislove123
 Also we can create, update(edit) and delete. We can know details about redactors, for example.  
 And we cant do anything if we are not logged in. Look 
 ## Login/Logout pages
-![img_5.png](img_5.png)  
+![img_5.png](img_5.png) 
 ![img_4.png](img_4.png)  
 
 
