@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="h1-wrapper">
+          <h1><strong>Newspaper List</strong></h1>
+        </div>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="{% url "agency:newspaper-create" %}" class="btn btn-primary">Create New Newspaper</a>
+      </div>
+    </div>
+
+    <div class="search">
+      {% include "includes/search_form.html" %}
+    </div>
+
+    {% if newspaper_list %}
+      <div class="topic-list-container">
+        {% for newspaper in newspaper_list %}
+          <div class="topic-item">
+            <div class="topic-name"><a href="{% url "agency:newspaper-detail" pk=newspaper.id %}">{{ newspaper.title }}</a></div>
+            <br>
+            <div class="topic-details">
+              <p><strong>Newspaper info:</strong></p>
+              <p><strong>ID:</strong>{{ newspaper.id }}</p>
+              <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
+              <p><strong>Topic:</strong> {{ newspaper.topic.name }}</p>
+            </div>
+            <br>
+            <div class="topic-publishes">
+              <p><strong>Redactors:</strong></p>
+              {% for publisher in newspaper.publishers.all %}
+                <a href="{% url "agency:redactor-detail" pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a>
+              {% empty %}
+                No publishes for this topic.
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="mt-4">There are no redactors.</p>
+    {% endif %}
+  </div>
+{% endblock %}

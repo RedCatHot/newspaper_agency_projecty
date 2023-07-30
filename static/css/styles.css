@@ -1,0 +1,287 @@
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Georgian, serif, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card,
+.topic-item,
+.publish-item,
+.topic-type-item,
+.navbar {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #41a5e5;
+}
+
+h1.display-4 {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+p.lead {
+  color: #070202;
+  font-size: 1.2rem;
+}
+
+.card h3,
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #109d3d;
+}
+
+.card p,
+.card-text {
+  font-size: 16px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination .active {
+  background-color: #336699;
+  color: #fff;
+}
+
+.hr-divider {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#full-screen-example {
+  width: 280px;
+}
+
+.topic-list-container,
+.publish-list-container,
+.topic-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.topic-item,
+.publish-item,
+.topic-type-item,
+.navbar {
+  background-color: #ee7b33;
+}
+
+.topic-name,
+.topic-details a,
+.topic-publishes a,
+.publish-name {
+  color: #9748a9;
+}
+
+.topic-name a,
+.topic-details a,
+.topic-publishes a,
+.topic-type-list-name a {
+  color: #000;
+}
+
+.topic-name,
+.publish-name,
+.topic-type-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.topic-details,
+.publish-details {
+  font-size: 16px;
+}
+
+.topic-publishes {
+  font-size: 16px;
+}
+
+.publish-details p {
+  margin: 5px 0;
+}
+
+.publish-buttons,
+.topic-type-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.publish-buttons a,
+.topic-type-buttons a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.btn-publish-details {
+  background-color: #109d3d;
+}
+
+.btn-publish-details:hover {
+  background-color: #e95e0d;
+}
+
+.btn-update {
+  background-color: #336699;
+}
+
+.btn-delete {
+  background-color: #cc2936;
+}
+
+.btn-update:hover,
+.btn-delete:hover {
+  background-color: #1b4966;
+}
+
+.navbar {
+  background-color: #693c1c;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #336699;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: #333;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #336699;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #336699;
+}
+
+.form-inline .navbar-brand {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.form-inline .navbar-brand:hover {
+  color: #336699;
+}
+
+.search {
+  margin-bottom: 10px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-md-4 {
+  float: left;
+  width: 33.33%;
+  padding: 0 15px;
+}
+
+.mt-4 {
+  display: inline-block;
+  background-color: #f8f8f8;
+  position: relative;
+  padding: 0 5px;
+  color: #cb0c2f;
+}
+
+.mt-4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #f3722c;
+  z-index: -1;
+}
+
+.h1-wrapper {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.col-md-6 p,
+.col-md-12 p {
+  color: #000
+}
+
+.col-md-12 h3 {
+  color: #000
+}
+
+.larger-emoji {
+  font-size: 50px;
+}

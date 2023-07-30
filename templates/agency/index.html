@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto text-center">
+      <div class="h1-wrapper">
+        <h1 class="display-4 mt-5">Newspaper Agency</h1>
+      </div>
+      <p class="lead">Agency Content</p>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title">Number of Topics</h3>
+          <p class="card-text">{{ num_topics }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title">Number of Newspapers</h3>
+          <p class="card-text">{{ num_newspapers }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title">Number of Redactors</h3>
+          <p class="card-text">{{ num_redactors }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-8 mx-auto text-center">
+      <p class="lead">You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
