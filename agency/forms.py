@@ -5,6 +5,9 @@ from agency.models import Redactor, Newspaper
 
 
 class RedactorCreationForm(UserCreationForm):
+    first_name = forms.CharField(max_length=100, required=True)
+    last_name = forms.CharField(max_length=100, required=True)
+
     class Meta:
         model = Redactor
         fields = UserCreationForm.Meta.fields + (

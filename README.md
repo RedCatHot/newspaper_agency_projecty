@@ -17,7 +17,9 @@ python -m venv venv
 venv\Scripts\activate (on Windows)  
 source venv/bin/activate (on macOS)  
 pip install -r requirements.txt  
-python manage.py runserver #starts Django Server
+python manage.py makemigrations  
+python manage.py migrate  
+python manage.py runserver
 
 
 ## Default user for website
@@ -26,6 +28,9 @@ username: RedCatHot
 password: Whatislove123
 
 ## Demo
+
+## ERD
+![img_6.png](img_6.jpg) 
 
 ## Home page
 ![img.png](img.png)   

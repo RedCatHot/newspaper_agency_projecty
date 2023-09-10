@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-4 text-right">
         <a href="{% url "agency:newspaper-update" pk=newspaper.id %}" class="btn btn-secondary link-to-page">Update</a>
-        <a href="#" class="btn btn-danger link-to-page">Delete</a>
+        <a href="{% url "agency:newspaper-delete" pk=newspaper.id %}" class="btn btn-danger link-to-page">Delete</a>
       </div>
     </div>
     <div class="h1-wrapper">

@@ -22,7 +22,7 @@
       <div class="topic-list-container">
         {% for newspaper in newspaper_list %}
           <div class="topic-item">
-            <div class="topic-name"><a href="{% url "agency:newspaper-detail" pk=newspaper.id %}">{{ newspaper.title }}</a></div>
+            <div class="topic-name"><a href="{% url 'agency:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a></div>
             <br>
             <div class="topic-details">
               <p><strong>Newspaper info:</strong></p>
@@ -34,9 +34,9 @@
             <div class="topic-publishes">
               <p><strong>Redactors:</strong></p>
               {% for publisher in newspaper.publishers.all %}
-                <a href="{% url "agency:redactor-detail" pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a>
+                <a href="{% url 'agency:redactor-detail' pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a>
               {% empty %}
-                No publishes for this topic.
+                No publishers for this topic.
               {% endfor %}
             </div>
           </div>
