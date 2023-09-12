@@ -35,6 +35,10 @@ h1 {
 h1.display-4 {
   color: #000;
   margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 p.lead {
@@ -106,6 +110,7 @@ p.lead {
 .topic-type-item,
 .navbar {
   background-color: #aa98df;
+
 }
 
 .topic-name,
@@ -164,23 +169,28 @@ p.lead {
 
 .btn-publish-details {
   background-color: #109d3d;
+  margin-top: 5px
 }
 
 .btn-publish-details:hover {
   background-color: #e95e0d;
+  margin-top: 5px
 }
 
 .btn-update {
   background-color: #336699;
+  margin-top: 5px
 }
 
 .btn-delete {
   background-color: #cc2936;
+  margin-top: 5px
 }
 
 .btn-update:hover,
 .btn-delete:hover {
   background-color: #1b4966;
+  margin-top: 5px
 }
 
 .navbar {
@@ -244,11 +254,12 @@ p.lead {
 }
 
 .mt-4 {
-  display: inline-block;
-  background-color: #f8f8f8;
-  position: relative;
-  padding: 0 5px;
-  color: #cb0c2f;
+    background-color: #f8f8f8;
+    position: relative;
+    padding: 0 5px;
+    color: #cb0c2f;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mt-4::before {
@@ -275,7 +286,7 @@ p.lead {
 
 .col-md-6 p,
 .col-md-12 p {
-  color: #000
+  color: #000;
 }
 
 .col-md-12 h3 {
@@ -284,4 +295,22 @@ p.lead {
 
 .larger-emoji {
   font-size: 50px;
+}
+
+.row-sm-10 h1,
+.row-sm-10 p {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.topic-item,
+.topic-type-item {
+  margin-bottom: 20px;
+}
+
+.row.mt-4.author-info {
+  display: inline-block;
 }

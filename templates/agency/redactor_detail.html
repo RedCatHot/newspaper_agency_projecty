@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-4 author-info">
       <div class="col-md-6">
         <p><strong>Username:</strong> {{ redactor.username }} </p>
         {% if redactor.years_of_experience %}
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="row mt-4">
+    <div class="row mt-4 newspaper-list">
       <div class="col-md-12">
         <h3>Newspapers</h3>
         {% for newspaper in redactor.newspapers.all %}
