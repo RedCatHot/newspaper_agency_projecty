@@ -20,24 +20,28 @@
 
     {% if topic_list %}
       <div class="topic-type-container">
-        {% for topic in topic_list %}
-          <div class="topic-type-item">
-            <div class="topic-type-name">{{ topic.name }}</div>
-            <div class="topic-type-list-name">
-              {% for newspaper in topic.newspapers.all %}
-                <hr>
-                <p>Newspapers:</p>
-                <p><strong>Title:</strong> <a href="{% url 'agency:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a></p>
-              {% empty %}
-                <p>There are no newspapers!</p>
-              {% endfor %}
+        <div class="row">
+          {% for topic in topic_list %}
+            <div class="col-md-6">
+              <div class="topic-type-item">
+                <div class="topic-type-name">{{ topic.name }}</div>
+                <div class="topic-type-list-name">
+                  {% for newspaper in topic.newspapers.all %}
+                    <hr>
+                    <p>Newspapers:</p>
+                    <p><strong>Title:</strong> <a href="{% url 'agency:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a></p>
+                  {% empty %}
+                    <p>There are no newspapers!</p>
+                  {% endfor %}
+                </div>
+                <div class="topic-type-buttons">
+                  <a href="{% url "agency:topic-update" pk=topic.id %}" class="btn btn-update">Update</a>
+                  <a href="{% url "agency:topic-delete" pk=topic.id %}" class="btn btn-delete">Delete</a>
+                </div>
+              </div>
             </div>
-            <div class="topic-type-buttons">
-              <a href="{% url "agency:topic-update" pk=topic.id %}" class="btn btn-update">Update</a>
-              <a href="{% url "agency:topic-delete" pk=topic.id %}" class="btn btn-delete">Delete</a>
-            </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     {% else %}
       <p class="mt-4">There are no topic types in the menu.</p>

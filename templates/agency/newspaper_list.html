@@ -19,25 +19,27 @@
     </div>
 
     {% if newspaper_list %}
-      <div class="topic-list-container">
+      <div class="row">
         {% for newspaper in newspaper_list %}
-          <div class="topic-item">
-            <div class="topic-name"><a href="{% url 'agency:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a></div>
-            <br>
-            <div class="topic-details">
-              <p><strong>Newspaper info:</strong></p>
-              <p><strong>ID:</strong>{{ newspaper.id }}</p>
-              <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
-              <p><strong>Topic:</strong> {{ newspaper.topic.name }}</p>
-            </div>
-            <br>
-            <div class="topic-publishes">
-              <p><strong>Redactors:</strong></p>
-              {% for publisher in newspaper.publishers.all %}
-                <a href="{% url 'agency:redactor-detail' pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a>
-              {% empty %}
-                No publishers for this topic.
-              {% endfor %}
+          <div class="col-md-6">
+            <div class="topic-item">
+              <div class="topic-name"><a href="{% url 'agency:newspaper-detail' pk=newspaper.id %}">{{ newspaper.title }}</a></div>
+              <br>
+              <div class="topic-details">
+                <p><strong>Newspaper info:</strong></p>
+                <p><strong>ID:</strong>{{ newspaper.id }}</p>
+                <p><strong>Published date:</strong> {{ newspaper.published_date }}</p>
+                <p><strong>Topic:</strong> {{ newspaper.topic.name }}</p>
+              </div>
+              <br>
+              <div class="topic-publishes">
+                <p><strong>Redactors:</strong></p>
+                {% for publisher in newspaper.publishers.all %}
+                  <a href="{% url 'agency:redactor-detail' pk=publisher.id %}">{{ publisher.first_name }} {{ publisher.last_name }}</a>
+                {% empty %}
+                  No publishers for this topic.
+                {% endfor %}
+              </div>
             </div>
           </div>
         {% endfor %}
